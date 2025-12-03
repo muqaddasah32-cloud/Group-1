@@ -3,11 +3,11 @@
 int main(){
 int m;
 double theta,d;
-printf("m = ",m);
+printf("Order, m = ",m);
 scanf("%d",&m);
-printf("theta = ",theta);
+printf("Angle, theta = ",theta);
 scanf("%lf",&theta);
-printf("d = ",d);
+printf("Slit separation, d = ",d);
 scanf("%lf",&d);
 theta=theta*3.1416/180.0;
 d=d*1e-6;
@@ -32,6 +32,7 @@ else
   printf("Color of light = Not in visible range\n");
 return 0;
 }
+
 
 
 
