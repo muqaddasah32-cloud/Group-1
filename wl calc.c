@@ -29,9 +29,10 @@ else if(lambda>=590 && lambda<625)
 else if(lambda>=625 && lambda<=750)
   printf("Color of light = Red\n"); 
 else
-  printf("Color of light = Not in visible range\n");
+  printf("color of light = Not in visible range\n");
 return 0;
 }
+
 
 
 
