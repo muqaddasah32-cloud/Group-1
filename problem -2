@@ -1,1 +1,14 @@
 
+#include<stdio.h>
+#include(math.h>
+int main(){
+int m1 = 3;
+int m2 = 2;
+double lambda1 = 530;
+double lambda2 = 700;
+double theta1 = 65 * 3.1416 / 180.0;
+double d,theta2;
+double theta1_rad = theta1 * M_PI/180.0;
+d=(m1*theta1)/sin(theta1_rad);
+double sin_theta2 = (m2 * lamda2) / d;
+
