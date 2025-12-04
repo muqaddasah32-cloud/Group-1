@@ -15,23 +15,24 @@ double lambda=(d*sin(theta))/m;
 lambda=lambda*1e9;
 printf("Wavelength, lambda = %.2f nm\n",lambda);
 if(lambda>=380 && lambda<450)
-  printf("Color of light = Violet\n");
+    printf("Color of light =\033[38;2;128;0;255m Violet\033[0m\n");
 else if(lambda>=450 && lambda<485)
-  printf("Color of light = Blue\n");    
+    printf("Color of light =\033[38;2;0;0;255m Blue\033[0m\n");
 else if(lambda>=485 && lambda<500)
-  printf("Color of light = Cyan\n"); 
+    printf("Color of light =\033[38;2;0;255;255m Cyan\033[0m\n");
 else if(lambda>=500 && lambda<565)
-  printf("Color of light = Green\n");
-else if(lambda>=565 && lambda<590)
-  printf("Color of light = Yellow\n"); 
-else if(lambda>=590 && lambda<625)
-  printf("Color of light = Orange\n"); 
-else if(lambda>=625 && lambda<=750)
-  printf("Color of light = Red\n"); 
+    printf("Color of light =\033[38;2;0;255;0m Green\033[0m\n");
+else if (lambda>=565 && lambda<590)
+    printf("Color of light =\033[38;2;255;255;0m Yellow\033[0m\n");
+else if (lambda>=590 && lambda<625)
+    printf("Color of light =\033[38;2;255;165;0m Orange\033[0m\n");
+else if (lambda>=625 && lambda<=750)
+    printf("Color of light =\033[38;2;255;0;0m Red\033[0m\n"); 
 else
   printf("color of light = Not in visible range\n");
 return 0;
 }
+
 
 
 
