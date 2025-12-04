@@ -1,13 +1,22 @@
 #include<stdio.h>
-#include(math.h>
+#include<math.h>
 int main(){
 int m1 = 3;
 int m2 = 2;
-double lambda1 = 530;
-double lambda2 = 700;
-double theta1 = 65 * 3.1416 / 180.0;
-double d,theta2;
-double theta1_rad = theta1 * M_PI/180.0;
-double d=(m1*theta1)/sin(theta1_rad);
-double sin_theta2 = (m2 * lamda2) / d;
-
+double lambda1_nm = 530;
+double lambda2_nm = 700;
+double lambda1 = lambda1_nm * 1e-9;
+double lambda2 = lambda2_nm * 1e-9;
+double theta1 = 65.0;
+double theta1_rad = theta1 * 3.1416/180.0;
+double d=(m1*lambda1)/sin(theta1_rad);
+double sin_theta2 = (m2 * lambda2) / d;
+if (sin_theta2 > 1.0 || sin_theta2 < -1.0) {
+    printf("No diffraction maximum possible.\n");
+  return 0;
+  }
+double theta2_rad = asin(sin_theta2);
+double theta2_deg = theta2_rad * 180.0 / 3.1416;
+printf("Second-order bright spot for red light = %.2f degrees\n", theta2_deg);
+return 0;
+}
